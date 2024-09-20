@@ -2,7 +2,7 @@ function addWord() {
     const container = document.getElementById("addHere");
     const word = document.getElementById("insertWord").value;
     const text = document.createElement("dt");
-    text.innerHTML = word;
+    text.innerText = word;
     container.appendChild(text);
     document.getElementById("insertWord").value = "";
 }
@@ -12,7 +12,7 @@ function searchWord() {
     const searchWord = document.getElementById("searchWord").value;
     document.getElementById("searchWord").value = "";
     for (let i = 0; i < dictionary.length; ++i) {
-        if (searchWord === dictionary[i].innerHTML) {
+        if (searchWord === dictionary[i].innerText) {
             return alert("This word exists in dictionary");
         }
     }
